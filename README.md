@@ -26,7 +26,6 @@ cd property-browsing-app
 npm install
 # Running the App
 Start the development server:
-```bash
 npm start
 
 Open your web browser and go to http://localhost:3000 to view the Property Browsing App.
@@ -36,5 +35,5 @@ Navigate through the property listings using the pagination buttons at the botto
 Explore the navigation links in the sidebar to access different sections of the app.
 
 
-Contact
+## Contact
 If you have any questions or feedback, you can reach me at pali.jayshree@gmail.com.

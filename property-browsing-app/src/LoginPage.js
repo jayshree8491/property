@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './LoginPage.css';
 
 function LoginPage() {
   const history = useNavigate();
@@ -18,6 +19,7 @@ function LoginPage() {
     <div className="container mt-5">
       <div className="card">
         <div className="card-body">
+          <h1> Welcome to Broki Property</h1>
           <h2 className="card-title">Login</h2>
           <input
             className="form-control mb-3"

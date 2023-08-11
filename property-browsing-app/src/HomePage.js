@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import PropertyCard from './PropertyCard';
 import mockProperties from './mockData';
+import './HomePage.css';
 
 function HomePage() {
   const [properties, setProperties] = useState(mockProperties);
@@ -52,54 +53,62 @@ function HomePage() {
 
     return (
       <div className="d-flex">
-        {/* Sidebar */}
-        <div className="bg-light border-end sidebar">
-          {/* Sidebar content */}
-          <div className="sidebar-header text-center py-4">
+      {/* Sidebar */}
+      <div className="sidebar">
+        {/* Sidebar content */}
+        <div className="sidebar-header">
           <h3>Broki Real Estate</h3>
         </div>
-        <ul className="nav flex-column">
-          <li className="nav-item">
-            <NavLink to="/home" className="nav-link">Home</NavLink>
+        <ul className="sidebar-nav">
+          <li className="sidebar-nav-item">
+            <NavLink to="/home" className="sidebar-link">Home</NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink to="/listings" className="nav-link">Property Listings</NavLink>
+          <li className="sidebar-nav-item">
+            <NavLink to="/listings" className="sidebar-link">Property Listings</NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink to="/about" className="nav-link">About Us</NavLink>
+          <li className="sidebar-nav-item">
+            <NavLink to="/about" className="sidebar-link">About Us</NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink to="/contact" className="nav-link">Contact Us</NavLink>
+          <li className="sidebar-nav-item">
+            <NavLink to="/contact" className="sidebar-link">Contact Us</NavLink>
           </li>
         </ul>
-        <div className="sidebar-footer text-center py-4">
+        <div className="sidebar-footer">
           <p>Contact us for all your real estate needs:</p>
           <p>Email: info@broki.in</p>
           <p>Phone: +1234567890</p>
         </div>
-        </div>
+      </div>
   
         {/* Main content */}
         <div className="flex-grow-1 p-3">
-          {/* Navigation bar */}
-          <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
-            <div className="container">
-              <a className="navbar-brand" href="/home">Property Browsing App</a>
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav ml-auto">
-                  <li className="nav-item">
-                    <a className="nav-link" href="/">Logout</a>
-                  </li>
-                </ul>
-              </div>
+        {/* Navigation bar */}
+        <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
+          <div className="container">
+            <a className="navbar-brand" href="/home">Property Browsing App</a>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <a className="nav-link" href="/">Logout</a>
+                </li>
+              </ul>
             </div>
-          </nav>
+          </div>
+        </nav>
   
           {/* Property listings */}
-          <div className="row">
+          <div className="property-list">
             {properties.map((property, index) => (
               <PropertyCard key={index} property={property} />
             ))}

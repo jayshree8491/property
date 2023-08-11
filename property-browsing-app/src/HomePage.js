@@ -4,53 +4,27 @@ import PropertyCard from './PropertyCard';
 import mockProperties from './mockData';
 import './HomePage.css';
 
+const propertiesPerPage = 3;
+
 function HomePage() {
   const [properties, setProperties] = useState(mockProperties);
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.ceil(properties.length / propertiesPerPage);
+  const startIndex = (currentPage - 1) * propertiesPerPage;
+  const endIndex = startIndex + propertiesPerPage;
+
+  const handlePrevPage = () => {
+    setCurrentPage(prevPage => Math.max(prevPage - 1, 1));
+  };
+
+  const handleNextPage = () => {
+    setCurrentPage(prevPage => Math.min(prevPage + 1, totalPages));
+  };
+
+  const displayProperties = properties.slice(startIndex, endIndex);
 
 
-   /* useEffect(() => {
-      // Fetch property data from the API
-      const apiKey = '807d7070b03d6a01beea342eee52471d'; // Replace with your actual API key
-      const headers = {
-        'accept': 'application/json',
-        'apikey': apiKey
-      };
-    
-      // Fetch property data from the API
-      axios.get('https://api.gateway.attomdata.com/propertyapi/v1.0.0/property/basicprofile?address1=4529%20Winona%20Court&address2=Denver%2C%20CO', { headers })
-      .then(response => {
-        console.log('API Response:', response.data);  // Handle the API response data
-        // Access the property data from the API response
-        const apiProperties = response.data.property;
-        console.log('Mapped Properties:', apiProperties);
-      
-        // Map the API properties to match your app's property structure
-        const formattedProperties = apiProperties.map(apiProperty => {
-          const rent = apiProperty.rent_amount ? `$${apiProperty.rent_amount}` : 'N/A';
-        const security = apiProperty.security_deposit ? `$${apiProperty.security_deposit}` : 'N/A';
-      const reviews = apiProperty.average_reviews ? apiProperty.average_reviews.toString() : 'N/A';
-        
-        return {
-          name: apiProperty.property_name,
-          rent: rent,
-          location: apiProperty.property_location,
-          reviews: reviews,
-          security: security,
-          image: apiProperty.property_image_url
-          };
-        });
-
-          console.log('Formatted Properties:', formattedProperties);
-      
-        setProperties(formattedProperties);
-      
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-    }, []);
-   */
-
+   
     return (
       <div className="d-flex">
       {/* Sidebar */}
@@ -109,10 +83,21 @@ function HomePage() {
   
           {/* Property listings */}
           <div className="property-list">
-            {properties.map((property, index) => (
+            {displayProperties.map((property, index) => (
               <PropertyCard key={index} property={property} />
             ))}
           </div>
+          <div className="pagination">
+          <button onClick={handlePrevPage} disabled={currentPage === 1}>
+            Previous
+          </button>
+          <span>
+            {currentPage} / {totalPages}
+          </span>
+          <button onClick={handleNextPage} disabled={currentPage === totalPages}>
+            Next
+          </button>
+        </div>
         </div>
       </div>
     );

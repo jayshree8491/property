@@ -25,15 +25,20 @@ Copy code
 cd property-browsing-app
 Install the required dependencies using npm:
 
-bash
+```bash
 Copy code
+
 npm install
+
 Running the App
+
 Start the development server:
 
-bash
+```bash
 Copy code
+
 npm start
+
 Open your web browser and go to http://localhost:3000 to view the Property Browsing App.
 
 Usage

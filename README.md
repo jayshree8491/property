@@ -44,4 +44,4 @@ Contributing
 If you'd like to contribute to the development of this app, feel free to fork the repository, make your changes, and submit a pull request.
 
 Contact
-If you have any questions or feedback, you can reach me at [pali.jayshree@gmail.com].
+If you have any questions or feedback, you can reach me at pali.jayshree@gmail.com.

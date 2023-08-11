@@ -20,18 +20,18 @@ Before you begin, ensure you have the following installed on your system:
    git clone https://github.com/jayshree8491/property-browsing-app.git
 Navigate to the project directory:
 
-```bash
+
 Copy code
 cd property-browsing-app
 Install the required dependencies using npm:
 
-```bash
+
 Copy code
 npm install
 Running the App
 Start the development server:
 
-```bash
+
 Copy code
 npm start
 Open your web browser and go to http://localhost:3000 to view the Property Browsing App.

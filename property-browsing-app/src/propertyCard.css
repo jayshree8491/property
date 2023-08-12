@@ -3,6 +3,10 @@
     transition: transform 0.3s ease;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add shadow */
   }
+  .card-img-top {
+    height: 200px; /* Adjust this value as needed */
+    object-fit: cover;
+  }
 
 /* PropertyCard.css */
 .property-card {
@@ -11,6 +15,9 @@
     margin-bottom: 20px;
   }
   
+  .talk-button {
+    width: 50%; /* Adjust the width as needed */
+  }
   .property-image {
     width: 150px;
     height: 150px;

@@ -79,8 +79,25 @@
   
   .sidebar-link:hover {
     background-color: #e2e3e5;
+    background-image: none;
   }
 
+/* HomePage.css */
+
+/* Style for pagination buttons */
+.pagination-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.pagination-button:hover {
+  background-color: #0056b3;
+}
 
 
   .navbar {

@@ -56,8 +56,7 @@ function PropertyCard({ property }) {
            
           </p>
           <div className="d-flex justify-content-between">
-            <button className="btn btn-primary">Talk to us</button>
-
+            <button className="btn btn-primary talk-button">Talk to us</button>
             <button className="btn btn-success">Share</button>
           </div>
         </div>

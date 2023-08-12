@@ -16,29 +16,26 @@ function LoginPage() {
   };
 
   return (
-    <div className="container mt-5">
-      <div className="card">
-        <div className="card-body">
-          <h1> Welcome to Broki Property</h1>
-          <h2 className="card-title">Login</h2>
-          <input
-            className="form-control mb-3"
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            className="form-control mb-3"
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button className="btn btn-primary" onClick={handleLogin}>Login</button>
-        </div>
-      </div>
+    <div className="login-container">
+    <div className="login-form">
+      <h2 className="card-title">Login</h2>
+      <input
+        className="form-control mb-3"
+        type="email"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <input
+        className="form-control mb-3"
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <button className="btn btn-primary" onClick={handleLogin}>Login</button>
     </div>
+  </div>
   );
 }
 

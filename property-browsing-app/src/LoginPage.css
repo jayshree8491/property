@@ -1,48 +1,48 @@
 /* LoginPage.css */
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('./images/images.jpeg'); /* Replace with your image path */
-    background-color: blue;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('./images/img.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.login-background {
+  animation: fadeBackground 3s ease-in-out alternate infinite; /* Animation duration and timing */
+  opacity: 0.4; /* Adjust the opacity as needed */
+}
+
+@keyframes fadeBackground {
+  0% {
+    opacity: 0.4; /* Initial opacity */
   }
-  
-  .card {
-    width: 300px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: none;
-    border-radius: 10px;
-    justify-content: center;
-    height: auto;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  100% {
+    opacity: 0.2; /* Faded opacity */
   }
-  
-  .card-title {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-    align-items: center;
-  }
-  
-  
-  .form-control {
-    margin-bottom: 15px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-  }
-  
-  .btn-primary {
-    width: 100%;
-  }
-  
+}
+
+.login-form {
+  width: 300px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-control {
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  width: 100%;
+}

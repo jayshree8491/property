@@ -88,16 +88,24 @@ function HomePage() {
             ))}
           </div>
           <div className="pagination">
-          <button onClick={handlePrevPage} disabled={currentPage === 1}>
-            Previous
-          </button>
-          <span>
-            {currentPage} / {totalPages}
-          </span>
-          <button onClick={handleNextPage} disabled={currentPage === totalPages}>
-            Next
-          </button>
-        </div>
+        <button
+          className="pagination-button"
+          onClick={handlePrevPage}
+          disabled={currentPage === 1}
+        >
+          Previous
+        </button>
+        <span>
+          {currentPage} / {totalPages}
+        </span>
+        <button
+          className="pagination-button"
+          onClick={handleNextPage}
+          disabled={currentPage === totalPages}
+        >
+          Next
+        </button>
+      </div>
         </div>
       </div>
     );
